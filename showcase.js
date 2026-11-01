@@ -44,7 +44,7 @@ root.classList.add('enhanced');history.replaceState({...history.state,kind:curre
 const views=[...document.querySelectorAll('[data-view]')],crops=[...document.querySelectorAll('[data-crop]')];
 views.forEach(b=>b.addEventListener('click',e=>{const quiet=reduce.matches||e.detail===0;if(quiet)root.classList.add('no-motion');views.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));crops.forEach(img=>{const on=img.dataset.crop===b.dataset.view;img.classList.toggle('active',on);img.setAttribute('aria-hidden',String(!on));});if(quiet)requestAnimationFrame(()=>requestAnimationFrame(()=>root.classList.remove('no-motion')));}));
 crops.forEach((img,i)=>img.setAttribute('aria-hidden',String(i!==0)));
-reduce.addEventListener('change',()=>{entrance?.cancel();invalidateNavigation();motionAnimations.forEach(a=>a.cancel());});document.addEventListener('visibilitychange',()=>{if(document.hidden){entrance?.cancel();invalidateNavigation();motionAnimations.forEach(a=>a.cancel());}});
+reduce.addEventListener('change',()=>{entrance?.cancel();viewTransition?.skipTransition();motionAnimations.forEach(a=>a.cancel());});document.addEventListener('visibilitychange',()=>{if(document.hidden){entrance?.cancel();viewTransition?.skipTransition();motionAnimations.forEach(a=>a.cancel());}});
 
 // Finite, viewport-led choreography. Default markup stays visible without JS.
 root.classList.add('motion-ready');root.dataset.motionEngine=document.startViewTransition?'shared-surface':'fallback';
