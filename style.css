@@ -29,3 +29,16 @@
 @media(max-width:800px){.identity{grid-template-columns:1.2fr 1fr}.identity h1{font-size:55px}.identity>p{font-size:15px}.cover-chat h2{font-size:30px}.cover-insight .cover-bottom>p{font-size:15px}}
 @media(max-width:600px){.identity{display:block;padding:26px 0 30px}.identity h1{font-size:58px}.identity .role{font-size:13px;margin-bottom:10px}.identity>p{font-size:16px;max-width:34ch;margin-top:20px}.cover-insight .cover-bottom{display:block}.cover-insight .cover-bottom>p{font-size:14px;max-width:44ch}.cover-insight .cover-status{margin-top:9px}.cover-insight .cover-action{margin-top:12px}.cover-insight{height:650px}.cover-chat h2{font-size:27px}.cover-potato,.cover-chat{min-height:440px}.computer-art{top:145px}.chat-art{margin-top:16px}.cover-status{font-size:10px}.cover-bottom>p{font-size:12px}.selected-heading{font-size:13px}.cover-insight h2{font-size:54px}.supporting h2{font-size:26px}}
 @media(max-width:400px){.identity h1{font-size:46px}.cover-insight h2{font-size:46px}.cover-chat h2{font-size:24px}.cover-potato,.cover-chat{min-height:460px}.cover-insight{height:610px}}
+
+/* Work method: concrete decisions, with paths into the project evidence. */
+.working-method{grid-template-columns:minmax(220px,.8fr) minmax(0,1.4fr);gap:70px;padding-top:60px}
+.method-intro>p{max-width:31ch;margin-top:22px;color:var(--pale)}
+.method-intro .education{margin-top:30px}
+.method-steps>article{display:grid;grid-template-columns:28px minmax(0,1fr);gap:20px;padding:25px 0;border-top:1px solid var(--line)}
+.method-number{font-size:12px;color:var(--pale);padding-top:9px}
+.method-steps h3{font-size:32px;line-height:1.15;margin-bottom:12px}
+.method-steps p{font-size:15px;line-height:1.65;max-width:58ch}
+.method-steps article a{display:inline-block;font-size:13px;color:var(--pale);padding:12px 0;min-height:44px;margin-top:4px}
+.method-steps>.outlink{margin-top:17px}
+@media(max-width:800px){.working-method{grid-template-columns:1fr;gap:30px}.method-intro>p{max-width:49ch}.method-intro .education{margin-top:20px}}
+@media(max-width:600px){.working-method{display:grid;gap:15px;padding-top:40px}.working-method h2{margin-bottom:0}.method-steps>article{gap:12px;padding:22px 0}.method-steps h3{font-size:29px}.method-steps p{font-size:15px}.method-intro>p{margin-top:17px}}
