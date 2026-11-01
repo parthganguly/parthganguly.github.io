@@ -47,7 +47,7 @@ crops.forEach((img,i)=>img.setAttribute('aria-hidden',String(i!==0)));
 reduce.addEventListener('change',()=>{entrance?.cancel();invalidateNavigation();motionAnimations.forEach(a=>a.cancel());});document.addEventListener('visibilitychange',()=>{if(document.hidden){entrance?.cancel();invalidateNavigation();motionAnimations.forEach(a=>a.cancel());}});
 
 // Finite, viewport-led choreography. Default markup stays visible without JS.
-root.classList.add('motion-ready');
+root.classList.add('motion-ready');root.dataset.motionEngine=document.startViewTransition?'shared-surface':'fallback';
 const observed=new WeakSet();
 function reveal(el,index=0){if(observed.has(el))return;observed.add(el);if(!reduce.matches){const frames=el.classList.contains('method-image')?[{opacity:.5,clipPath:'inset(8% 0 8% 0)'},{opacity:1,clipPath:'inset(0 0 0 0)'}]:[{opacity:.25,transform:'translateY(18px)'},{opacity:1,transform:'translateY(0)'}];play(el,frames,{duration:320,delay:Math.min(index*55,110),easing:'cubic-bezier(.23,1,.32,1)',fill:'backwards'});}}
 if(!currentPanel()&&!reduce.matches){document.querySelectorAll('.identity .role,.identity h1,.identity>p').forEach((el,i)=>play(el,[{opacity:0,transform:'translateY(14px)'},{opacity:1,transform:'translateY(0)'}],{duration:420,delay:i*65,easing:'cubic-bezier(.23,1,.32,1)',fill:'backwards'}));}
