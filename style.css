@@ -38,3 +38,5 @@
 
 
 .stage:focus-visible{outline:none}.stage:focus-visible .stage-story h2{outline:2px solid var(--blue);outline-offset:8px}
+
+@media(min-width:1101px){.cover-potato .computer-art{bottom:118px;transform:rotate(-7deg) scale(.88)}.cover-potato .cover-bottom>p{max-width:calc(100% - 190px)}}
