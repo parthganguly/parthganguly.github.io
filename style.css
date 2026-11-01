@@ -42,3 +42,5 @@
 .method-steps>.outlink{margin-top:17px}
 @media(max-width:800px){.working-method{grid-template-columns:1fr;gap:30px}.method-intro>p{max-width:49ch}.method-intro .education{margin-top:20px}}
 @media(max-width:600px){.working-method{display:grid;gap:15px;padding-top:40px}.working-method h2{margin-bottom:0}.method-steps>article{gap:12px;padding:22px 0}.method-steps h3{font-size:29px}.method-steps p{font-size:15px}.method-intro>p{margin-top:17px}}
+
+.method-image{margin-top:28px;max-width:360px}.method-image img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:55% 53%}.method-image figcaption{font-size:11px;color:var(--pale);margin-top:9px}.method-steps article a svg{vertical-align:middle;margin-left:4px;width:14px;height:14px}@media(max-width:800px){.method-image{max-width:360px}}@media(max-width:600px){.method-image{max-width:100%;margin-top:24px}.method-image img{aspect-ratio:4/3}}
